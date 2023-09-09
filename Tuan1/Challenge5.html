@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge5</title>
+</head>
+<body>
+    <script>
+        function calcAvg(score1, score2, score3){
+            return ((score1 + score2 + score3)/3)
+        } 
+        function checkWinner(avgDolphin , avgKoalas) {
+            if (avgDolphin > avgKoalas){
+                console.log('Dolphin win (', avgDolphin, ') vs Koalas (', avgKoalas,')')
+
+            }else if (avgKoalas > avgDolphin ){
+                console.log('Koalas win (', avgKoalas, ') vs Dolphin (', avgDolphin,')')
+            }else {
+                console.log('no team win');
+            }
+        }
+
+        //test data 
+        console.log('-----------TEST DATA 1---------');
+        const dScore11 = 44
+        const dScore12 = 23
+        const dScore13 = 71
+        const kScore11 = 65
+        const kScore12 = 54
+        const kScore13 = 49
+
+        const avgDolphin1 = calcAvg(dScore11,dScore12,dScore13)
+        const avgKoalas1 = calcAvg(kScore11, kScore12, kScore13)
+        console.log('Dolphin avg score : ', avgDolphin1);
+        console.log('Koalas avg score :', avgKoalas1);
+        checkWinner(avgDolphin1, avgKoalas1)
+
+        console.log('-----------TEST DATA 2---------');
+        const dScore21 = 85
+        const dScore22 = 54
+        const dScore23 = 41
+        const kScore21 = 23
+        const kScore22 = 34
+        const kScore23 = 27
+        const avgDolphin2 = calcAvg(dScore21,dScore22,dScore23)
+        const avgKoalas2 = calcAvg(kScore21, kScore22, kScore23)
+        console.log('Dolphin avg score : ', avgDolphin2);
+        console.log('Koalas avg score :', avgKoalas2);
+        checkWinner(avgDolphin2, avgKoalas2)
+    </script>
+</body>
+</html>

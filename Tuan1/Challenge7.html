@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge7</title>
+</head>
+<body>
+    <script>
+        function Person(name, mass, height){
+            this.name = name
+            this.mass = mass
+            this.height = height
+        }
+        var mark = new Person("Mark Miller", 78, 1.69)
+        var John = new Person ('John Smith', 92,1.95)
+
+        function calcBMI(m, h){
+            var BMI = m/ (h **2)
+            return BMI.toFixed(2)
+        }
+
+        if (calcBMI(mark.mass, mark.height) > calcBMI(John.mass, John.height))
+            console.log(mark.name,"'s BMI(",calcBMI(mark.mass, mark.height),") is higher than ",John.name,"'s (",calcBMI(John.mass, John.height),")");
+        else 
+            console.log(John.name,"'s BMI(",calcBMI(John.mass, John.height),") is higher than ",mark.name,"'s (",calcBMI(mark.mass, mark.height),")");
+    </script>
+</body>
+</html>

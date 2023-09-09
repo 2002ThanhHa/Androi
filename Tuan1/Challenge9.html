@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge9
+    </title>
+</head>
+<body>
+    <script>
+        function printForecast(arr) {
+            let str = '';
+            for (let i = 0; i < arr.length; i++) {
+                str +=arr[i]+'oC in '+ (i+1) + ' day' + (i == arr.length -1 ? '.' : '...') 
+            }
+            console.log(str);
+        }
+
+        // Data 1
+        printForecast([17, 21, 23]);
+
+        // Data 2
+        printForecast([12, 5, -5, 0, 4]);
+
+    </script>
+</body>
+</html>
