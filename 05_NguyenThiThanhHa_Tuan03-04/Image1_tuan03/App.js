@@ -55,9 +55,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    viewLogo: {
-      marginTop: 20,
-    },
+   
     logo: {
       width: 150,
       height: 150,
