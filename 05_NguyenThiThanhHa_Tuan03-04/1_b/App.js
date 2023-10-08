@@ -8,6 +8,7 @@ export default function App() {
         source={require("./assets/lock-152879 1.png")}
         style={{ width: 105, height: 117 }}
       />
+      
       <Text style={styles.title}>Forget Password</Text>
       <Text style={styles.title2}>Provide your account’s email for which you want to reset your password</Text>
 

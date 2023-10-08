@@ -9,6 +9,7 @@ export default function App() {
       <Text style={styles.title2}>
         Enter ontime password sent on ++849092605798
       </Text>
+
       <View style={styles.rowInput}>
         <TextInput style={styles.input} keyboardType="numeric" maxLength={1} />
         <TextInput style={styles.input} keyboardType="numeric" maxLength={1} />
@@ -17,6 +18,7 @@ export default function App() {
         <TextInput style={styles.input} keyboardType="numeric" maxLength={1} />
         <TextInput style={styles.input} keyboardType="numeric" maxLength={1} />
       </View>
+
       <TouchableOpacity style={styles.btn}>
         <Text style={{ fontSize: 18, fontWeight: "700" }}>NEXT</Text>
       </TouchableOpacity>
@@ -31,13 +33,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-evenly",
   },
-  background: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 640,
-  },
+ 
   head1: {
     height: 70,
     textAlign: "center",
