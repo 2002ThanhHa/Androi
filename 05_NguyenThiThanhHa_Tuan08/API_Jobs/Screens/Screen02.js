@@ -23,16 +23,7 @@ export default function Screen01({navigation, route}) {
         fetch("https://6544afab5a0b4b04436cbf0a.mockapi.io/API_1")
             .then(response => response.json())
             .then(data => {
-                const usernameData = data.find(item => item.name === name);
-                setToDo(usernameData.text);
-                setData(usernameData);
-                if (usernameData) {
-                    const textArray = usernameData.text;
-                    console.log(textArray);
-                    update = 0;
-                } else {
-                    console.log("Không tìm thấy dữ liệu cho 'username'");
-                }
+                setData (data)
             })
             .catch(error => {
                 console.error("Đã xảy ra lỗi khi lấy dữ liệu:", error);
@@ -83,12 +74,39 @@ export default function Screen01({navigation, route}) {
 
                 ))}
     </View>
-    <View style={{marginTop: 30,  alignItems:'center', }}>
-        <Text style ={{  height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>To check email </Text>
-        <Text style ={{ height:40, width: 350, backgroundColor:'#9095A0'}}>To check email </Text>
+    <View style={{marginTop: 30,marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>To check email </Text>
+       
     </View>
-                <Pressable onPress={() => { navigation.navigate("Screen03", { name, data, update }) }} 
-                style={{marginTop: 15, backgroundColor: "#24c3d9", width: 60, height: 60, borderRadius: 50, justifyContent: "center", alignItems: "center", marginBottom: 20 }}>
+    <View style={{marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>UI task web page </Text>
+       
+    </View>
+    <View style={{marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>Learn javascrip basic </Text>
+       
+    </View>
+    <View style={{marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>Learn HTLM Advance </Text>
+       
+    </View>
+    <View style={{marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>Medical AP UI</Text>
+       
+    </View>
+    <View style={{marginLeft:30,alignItems:'center',flexDirection:'row',height:40, width: 350, backgroundColor:'#9095A0',marginBottom: 20, borderRadius:10}}>
+        <AntDesign name="checksquareo" size={24} color="green" />
+        <Text style={{fontWeight:'bold'}}>Learn Java </Text>
+       
+    </View>
+   
+                <Pressable onPress={() => { navigation.navigate("Screen03", { name }) }} 
+                style={{marginTop: 15,marginLeft:180, backgroundColor: "#24c3d9", width: 60, height: 60, borderRadius: 50, justifyContent: "center", alignItems: "center", marginBottom: 20 }}>
                     <Entypo name="plus" size={40} color="#fff" />
                 </Pressable>
             </View>
